@@ -1,11 +1,15 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {ScrollView} from 'react-native';
 import Home from './screens/home';
+import Post from './screens/post';
+import Feed from '../src/assets/data/feed';
+const post1 = Feed[0];
 const Main = () => {
   return (
-    <View>
+    <ScrollView>
       <Home />
-    </View>
+      <Post post={post1} />
+    </ScrollView>
   );
 };
 export default Main;
